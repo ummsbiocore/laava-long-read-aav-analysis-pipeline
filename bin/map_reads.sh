@@ -50,7 +50,7 @@ else
 fi
 
 threads=$(nproc)
-minimap2 --eqx -a --secondary=no -t $threads all_refs.fa "$reads_fn" > tmp.mapped.sam
+minimap2 -x map-hifi --eqx -a --secondary=no -t $threads all_refs.fa "$reads_fn" > tmp.mapped.sam
 # Sort the mapped reads by name
 name_bam="$sample_id.sort_by_name.bam"
 samtools sort -@ $threads -n -O BAM -o "$name_bam" tmp.mapped.sam
