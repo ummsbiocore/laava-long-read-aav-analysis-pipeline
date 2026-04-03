@@ -49,7 +49,7 @@ output:
  tuple val(name), file("${name}.sort_by_pos.bam"), file("${name}.sort_by_pos.bam.bai")  ,emit:g_1_bam_bai10_g_13 
 
 
-container 'quay.io/viascientific/laava:1.0.0'
+container 'quay.io/ummsbiocore/laava:1.0.0'
 
 script:
 
@@ -105,7 +105,7 @@ output:
  path "${sample_id}_AAV_report.html"  ,emit:g_2_outputFileHTML1313 
  path "${sample_id}_AAV_report.pdf"  ,emit:g_2_outputFilePdf1414 
 
-container 'quay.io/viascientific/laava:1.0.0'
+container 'quay.io/ummsbiocore/laava:1.0.0'
 
 script:
 ff_fa_path = flipflop_fa.name.startsWith('NO_FILE') ? "" : "${flipflop_fa}"
